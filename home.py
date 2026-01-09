@@ -47,21 +47,6 @@ df = df.rename(columns={
     "How would you describe your general academic performance? / Bagaimanakah anda menerangkan prestasi akademik umum anda?": "General_Academic_Performance"
 })
 
-# ================= OVERALL SUMMARY =================
-st.header("📋 Dataset Overview")
-
-col1, col2, col3, col4 = st.columns(4)
-
-col1.metric("Total Records", len(df))
-col2.metric("Average Age", f"{df['Age'].mean():.1f}")
-col3.metric("Top Academic Performance", df['General_Academic_Performance'].mode()[0])
-col4.metric("Top Social Media Usage", df['Social_Media_Use_Frequency'].mode()[0])
-
-with st.expander("View Dataset Preview"):
-    st.dataframe(df.head(20), use_container_width=True)
-
-st.markdown("---")
-
 # ================= LOAD DATA =================
 @st.cache_data
 def load_data():
