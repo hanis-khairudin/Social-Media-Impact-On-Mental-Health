@@ -13,6 +13,16 @@ st.set_page_config(
     layout="wide"
 )
 
+st.sidebar.title("📊 Dashboard Menu")
+st.sidebar.info(
+    "This dashboard explores the relationship between "
+    "internet usage and student mental health."
+)
+
+st.sidebar.markdown("### 📌 Pages")
+st.sidebar.markdown("- 🏠 Home")
+st.sidebar.markdown("- 🧠 Mental Health Analysis")
+
 # ================= HELPER FUNCTION =================
 def safe_corr(df, col_x, col_y):
     if col_x not in df.columns or col_y not in df.columns:
@@ -42,16 +52,3 @@ col4.metric("Top Social Media Usage", df['Social_Media_Use_Frequency'].mode()[0]
 
 st.markdown("### 🔍 Dataset Preview")
 st.dataframe(df.head(20), use_container_width=True)
-
-# ================= SIDEBAR =================
-st.sidebar.header("⚙️ Analysis Settings")
-
-variable = st.sidebar.selectbox(
-    "Select Mental Health Variable",
-    [
-        "Assignments_Stress",
-        "Sleep_Affected_By_Social_Media",
-        "Social_Media_Positive_Impact_on_Wellbeing",
-        "Social_Media_Negative_Impact_on_Wellbeing"
-    ]
-)
