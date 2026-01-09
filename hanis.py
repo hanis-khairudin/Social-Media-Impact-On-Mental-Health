@@ -9,19 +9,6 @@ st.title("🧠 Social Media Impact on Mental Health")
 
 df = load_data()
 
-# ================= SIDEBAR =================
-st.sidebar.header("⚙️ Analysis Settings")
-
-variable = st.sidebar.selectbox(
-    "Select Mental Health Variable",
-    [
-        "Assignments_Stress",
-        "Sleep_Affected_By_Social_Media",
-        "Social_Media_Positive_Impact_on_Wellbeing",
-        "Social_Media_Negative_Impact_on_Wellbeing"
-    ]
-)
-
 # ================= SUMMARY BOX =================
 st.sidebar.markdown("### 📌 Summary")
 
