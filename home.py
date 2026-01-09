@@ -42,3 +42,16 @@ col4.metric("Top Social Media Usage", df['Social_Media_Use_Frequency'].mode()[0]
 
 st.markdown("### 🔍 Dataset Preview")
 st.dataframe(df.head(20), use_container_width=True)
+
+# ================= SIDEBAR =================
+st.sidebar.header("⚙️ Analysis Settings")
+
+variable = st.sidebar.selectbox(
+    "Select Mental Health Variable",
+    [
+        "Assignments_Stress",
+        "Sleep_Affected_By_Social_Media",
+        "Social_Media_Positive_Impact_on_Wellbeing",
+        "Social_Media_Negative_Impact_on_Wellbeing"
+    ]
+)
