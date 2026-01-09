@@ -27,13 +27,6 @@ st.set_page_config(
     layout="wide"
 )
 
-# banner
-st.image(
-    "banner.jpeg",
-    use_container_width=True,
-    caption="Internet Use and Mental Health Dashboard"
-)
-
 # --- LOAD DATA ---
 @st.cache_data
 def load_data():
