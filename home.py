@@ -4,7 +4,7 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings
-warnings.filterwarnings("ignore")
+from data_loader import load_data
 
 # ================= PAGE CONFIG (MUST BE FIRST) =================
 st.set_page_config(
@@ -26,7 +26,8 @@ def safe_corr(df, col_x, col_y):
 st.title("🧠 Student Mental Health Monitoring Insights Dashboard")
 st.markdown("Exploring the Relationship Between Internet Use and Mental Health.")
 
-
+# ================= LOAD DATA =================
+df = load_data()
 
 st.title("🧠 Student Mental Health Dashboard")
 st.markdown("Overview of Internet Use and Mental Health Dataset")
