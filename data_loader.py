@@ -13,7 +13,6 @@ def load_data():
 
     df = load_data()
     df.columns = df.columns.str.strip()
-    return df
 
 # ================= RENAME COLUMNS =================
 # Rename Columns
